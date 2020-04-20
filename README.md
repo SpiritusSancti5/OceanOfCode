@@ -89,7 +89,7 @@ As output I would get an array of 225 ints with values between 0 and 15 or highe
 
 ### Commands generator
 
-I then used the original input from the game turn with the this processed map to generate an outputs that represent the bot's commands for the turn. There are 7 outputs that represents the priority of the individual command.
+I then used the original input from the game turn with this processed map to generate an output that represents the bot's commands for the turn. There are 7 outputs that represents the priority of the individual command.
 
 I corrected the output by using replays of the top 10 bots at the time of training this model. Basically a type imitation learning.
 
