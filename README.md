@@ -79,7 +79,7 @@ Due to the nature of the game, using ML is a tedious and very demanding task. I 
 
 There are a lot of trends a bot would follow if it were to aim for the optimal move from any given position for example. Not to mention there's a deeper dive into statistics one has to take to try and cover everything.
 
-To avoid all this and prevent do any unnecessary extra work i have attempted to build a model and train it in two phases.
+To avoid all this and try avoid any unnecessary extra work, i have attempted to build a model and train it in two phases.
 
 ### Game state predictor
 
