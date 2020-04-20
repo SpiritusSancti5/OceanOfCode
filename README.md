@@ -38,7 +38,7 @@ Each Cell had:
 7. opponent's mines (only after it was first updated and updated only when there was a single possible path)
 8. explosions (wanted to make it easier to track opponent's life change, never used it though)
 * An array of 225 representing the 15x15 map tiles. Each containing the BFS length to every other place on the map. This was calculated turn 1.
-* An vector for each player containing possible paths. I store the paths in the form of lists of pointers to Node objects.
+* A vector for each player containing possible paths. I store the paths in the form of lists of pointers to Node objects.
 
 **Note** The possible positions a torpedo can hit from a cell, can also be precalculated. Same goes for any MOVE+SILENCE combination.
 
@@ -47,14 +47,14 @@ Each Cell had:
 For convinience and ease of access to information about the gamestate, I made sure i added every single proprety I needed.
 
 Each node contains:
-Node* start - to quickly access the starting point
-Node* parent - quickly access the previous node
-vector<Node*> children - used when i had to split the list into multiple ones due to SILENCE skill
-int x y - as position
-int timer - to track how many turns ago a mine was layed
-int life_expectancy - this helps me track life change on the submarine's path
-Visits* vis - an object to keep track of visited cells and do some other related operations
-vector<Node*>* mines - quick reference to mines layed on the path this node is on
+- Node* start - to quickly access the starting point
+- Node* parent - quickly access the previous node
+- vector<Node*> children - used when i had to split the list into multiple ones due to SILENCE skill
+- int x y - as position
+- int timer - to track how many turns ago a mine was layed
+- int life_expectancy - this helps me track life change on the submarine's path
+- Visits* vis - an object to keep track of visited cells and do some other related operations
+- vector<Node*>* mines - quick reference to mines layed on the path this node is on
 
 ### Bot Logic
 
@@ -97,7 +97,7 @@ I corrected the output by using replays of the top 10 bots at the time of traini
 
 I spent about a week of my free time on this in order to get a fully functional bot that correctly outputs **MOVE N TORPEDO** about 90% of the time and random weird, yet valid commands on any other turn.
 
-I might have failed with this because either of some bug in the backpropagation, not enough training date or any of the many possible flaws with the model itself. However this was back when silver was the highest league, so it might have been too soon either way to train it, not to get started though.
+I might have failed with this because either of some bug in the backpropagation, not enough training data or any of the many possible flaws with the model itself. However this was back when silver was the highest league, so it might have been too soon either way to train it, not to get started though.
 
 The next attempt would be to take either of the two parts and train them individually and then add them back together later.
 
